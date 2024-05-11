@@ -31,6 +31,8 @@ Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
 
 #endif
 
+#define GAME_NAME				"Quake 2"
+
 #include <assert.h>
 #include <math.h>
 #include <stdio.h>
@@ -52,7 +54,12 @@ Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
 #endif
 
 typedef unsigned char 		byte;
+
+#ifdef __cplusplus
+typedef int qboolean;
+#else
 typedef enum {false, true}	qboolean;
+#endif
 
 
 #ifndef NULL

@@ -3,6 +3,7 @@ project(quake2 VERSION 1.0 DESCRIPTION "Quake II Game" LANGUAGES C)
 
 add_subdirectory(game)
 add_subdirectory(ref_gl)
+add_subdirectory(ref_d3d)
 add_subdirectory(tools/qe4)
 add_subdirectory(tools/bsp/qbsp3)
 add_subdirectory(tools/bsp/qrad3)

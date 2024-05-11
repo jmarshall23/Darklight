@@ -2,6 +2,7 @@
 //
 
 #include "../client/ref.h"
+#include "tinydx.h"
 
 extern refimport_t ri;
 
@@ -50,3 +51,24 @@ typedef struct
 } swwstate_t;
 
 extern swwstate_t sww_state;
+
+//
+// idRenderSystemLocal
+//
+class idRenderSystemLocal {
+public:
+	void			Init(int width, int height, HINSTANCE hinst, HWND hwnd);
+	void			Shutdown(void);
+public:
+	tr_renderer* m_renderer = nullptr;
+	tr_descriptor_set* m_desc_set = nullptr;
+	tr_cmd_pool* m_cmd_pool = nullptr;
+	tr_cmd** m_cmds = nullptr;
+
+	tr_cmd* cmd = nullptr;
+
+	int s_window_width;
+	int s_window_height;
+};
+
+extern idRenderSystemLocal tr;

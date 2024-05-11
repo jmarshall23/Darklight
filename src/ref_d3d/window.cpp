@@ -9,8 +9,6 @@ swwstate_t sww_state;
 /*
 ** VID_CreateWindow
 */
-#define	WINDOW_CLASS_NAME "Quake 2"
-
 void VID_CreateWindow(int width, int height)
 {
 	WNDCLASS		wc;
@@ -44,7 +42,7 @@ void VID_CreateWindow(int width, int height)
 	wc.hCursor = LoadCursor(NULL, IDC_ARROW);
 	wc.hbrBackground = (HBRUSH)COLOR_GRAYTEXT;
 	wc.lpszMenuName = 0;
-	wc.lpszClassName = WINDOW_CLASS_NAME;
+	wc.lpszClassName = GAME_NAME;
 
 	if (!RegisterClass(&wc))
 		ri.Sys_Error(ERR_FATAL, "Couldn't register window class");
@@ -63,8 +61,8 @@ void VID_CreateWindow(int width, int height)
 
 	sww_state.hWnd = CreateWindowEx(
 		exstyle,
-		WINDOW_CLASS_NAME,
-		"Quake 2",
+		GAME_NAME,
+		GAME_NAME,
 		stylebits,
 		x, y, w, h,
 		NULL,

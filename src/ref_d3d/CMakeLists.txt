@@ -11,7 +11,7 @@ set(CMAKE_CXX_STANDARD_REQUIRED True)
 set(CMAKE_CONFIGURATION_TYPES "Debug;Release;DebugAlpha;ReleaseAlpha")
 
 # Define the DLL target
-add_library(ref_d3d SHARED "d3d_main.cpp" "tinydx.cpp" "d3d_2d.cpp" "d3d_frame.cpp" "d3d_image.cpp" "d3d_model.cpp" "window.cpp")
+add_library(ref_d3d SHARED "d3d_main.cpp" "tinydx.cpp" "d3d_2d.cpp" "d3d_frame.cpp" "d3d_image.cpp" "d3d_model.cpp" "window.cpp" "d3d_shader.cpp" "d3d_matrix.cpp" "d3d_buffer.cpp")
 
 # Link with necessary libraries
 target_link_libraries(ref_d3d 

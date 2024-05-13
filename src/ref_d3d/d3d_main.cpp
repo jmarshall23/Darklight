@@ -77,6 +77,9 @@ void idRenderSystemLocal::Init(int width, int height, HINSTANCE hinst, HWND hwnd
 	tr_create_cmd_pool(m_renderer, m_renderer->graphics_queue, false, &m_cmd_pool);
 	tr_create_cmd_n(m_cmd_pool, false, tr_image_count, &m_cmds);
 
+	diffuseOnlyShader = LoadShader("shaders/diffuseonly.hlsl");
+
+	InitPalette();
 }
 
 /*
